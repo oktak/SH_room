@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>A-Frame Workshop | HKOSCon2017 </title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+<link rel="stylesheet" href="assets/css/normalize.css">
+<link rel="stylesheet" href="assets/css/style.css">
+-->
+
+<script src="https://cdn.rawgit.com/aframevr/aframe/master/dist/aframe-master.min.js"></script>
+
+<!-- Extra for Collision -->
+<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.3/dist/aframe-extras.min.js"></script>
+
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<a-scene>
+    <!--
+    <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+    <a-box position="-1 0.5 -3" rotation="0 45 0" width="1" height="1" depth="1.2" color="#4CC3D9"></a-box>
+    <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+    -->
+    <a-sky color="#ECECEC"></a-sky>
+    
+    
+    <!-- the override camera
+    <a-entity camera position="0.0 1.6 0" rotation="-35 -38 10" ></a-entity>
+     -->
+     <a-entity camera="userHeight: 1.6"  position="0.0 1.8 0" rotation="-35 -38 10" universal-controls="movementAcceleration:20" kinematic-body="radius:0.25"></a-entity>
+     <!-- Here still no floor yet camera will fall down to hell -->
+     
+     <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="40" visible="false" static-body></a-plane>
+     <a-plane position="0 0 -1.998" rotation="0 0 0" width="5" height="3" visible="false" static-body></a-plane>
+     <!--
+     <a-box position="5.954 0.354 0.780" depth="0.460" height="0.750" width="1.190" visible="false" static-body></a-box>
+     -->
+     
+    <a-collada-model position="-3.015 0 -1.668" scale="0.01 0.01 0.01" src="ws-try.dae"></a-collada-model>
+</a-scene>
+
+</body>
+</html>
